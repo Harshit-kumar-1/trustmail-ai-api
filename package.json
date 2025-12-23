@@ -1,0 +1,32 @@
+{
+  "name": "trustmail-ai-api",
+  "version": "1.0.0",
+  "description": "Backend for trustmail ai",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshit-kumar-1/trustmail-ai-api.git"
+  },
+  "author": "Harshit Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Harshit-kumar-1/trustmail-ai-api/issues"
+  },
+  "homepage": "https://github.com/Harshit-kumar-1/trustmail-ai-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
