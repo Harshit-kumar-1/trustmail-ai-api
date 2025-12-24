@@ -1,8 +1,7 @@
-````
 # Trustmail AI — API Documentation
 
 **Version:** v1
-**Base URL:** https://api.trustmail.ai
+**Base URL:** https://api.domainame.in
 **Authentication:** Bearer API Key
 
 Trustmail AI provides intelligent, privacy-first email verification with explainable trust signals and risk scoring.
@@ -15,6 +14,70 @@ All API requests require an API key provided via the `Authorization` header.
 
 ```http
 Authorization: Bearer YOUR_API_KEY
+```
+
+Requests without a valid API key will be rejected.
+
+---
+
+## Content Type
+
+All requests and responses must use JSON.
+
+```http
+Content-Type: application/json
+```
+
+---
+
+## API Endpoints
+
+### Verify Email
+
+**POST** `/v1/email/verify`
+
+Verifies an email address and returns trust signals, a risk score, and confidence level.
+
+#### Why POST?
+
+- Email addresses are sensitive data
+- Prevents exposure in URLs and logs
+- Cleaner and more secure request handling
+
+---
+
+## Request
+
+### Headers
+
+| Header        | Required | Description      |
+| ------------- | -------- | ---------------- |
+| Authorization | Yes      | Bearer API key   |
+| Content-Type  | Yes      | application/json |
+
+---
+
+### Request Body
+
+````json
+{
+  "email": "user@example.com",
+  ## Trustmail AI — API Documentation
+
+  **Version:** v1
+  **Base URL:** https://api.trustmail.ai
+  **Authentication:** Bearer API Key
+
+  Trustmail AI provides intelligent, privacy-first email verification with explainable trust signals and risk scoring.
+
+  ---
+
+  ## Authentication
+
+  All API requests require an API key provided via the `Authorization` header.
+
+  ```http
+  Authorization: Bearer YOUR_API_KEY
 ````
 
 Requests without a valid API key will be rejected.
@@ -85,7 +148,7 @@ Context enables Trustmail AI to adapt trust logic based on usage.
 
 ---
 
-## Response — Success
+## Response — Success (200 OK)
 
 ```json
 {
@@ -153,7 +216,7 @@ Context enables Trustmail AI to adapt trust logic based on usage.
 
 ---
 
-### Unauthorized
+### Unauthorized (401)
 
 ```json
 {
@@ -210,7 +273,3 @@ Breaking changes will be released under a new major version.
 - Webhook callbacks
 - Context-aware AI tuning
 - Expanded confidence explanations
-
-```
-
-```
